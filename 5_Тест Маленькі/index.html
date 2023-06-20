@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Абетка</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+	</head>
+	<body>
+		<div class="wrapper">
+<header class="header">
+	<!-- <div class="container">
+		<div class="header__row">
+				<div class="header__menu menu">
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="" class="menu__link"></a></li>
+							<li><a href="" class="menu__link"></a></li>
+							<li><a href="" class="menu__link"></a></li>
+						</ul>
+					</nav>
+				</div> -->
+
+		</div>
+	</div>
+</header>			<div id="app" class="test">
+				<div class="test__content"> 
+					<img class="test__back" src="img/7895078.jpg" alt="">
+					<div class="test__container">
+						<div class="test__text">
+							
+							<h1 class="test__text-h1"><img @click="questionSound" class="test__sound" src="img/song.png" alt="">Розглянь літеру</h1>
+						</div>
+						<div class="test__img">
+							<img src="img/Letter/Aa.png" alt="" class="test__img-latter">
+						</div>
+							<img @:click="aSound" class="test__sound test__sound-latter" src="img/song.png" alt="">
+						<div class="test__queshion">
+							<h2 class="test__ques"><img @:click="atakuSound" class="test__sound test__sound2" src="img/song.png" alt="">Знайди маленьку "А"</h2>
+						</div>
+						<div class="test__answer">
+							<div @click="falseAnswer" class="test__answer-one">о</div>
+							<div @click="trueAnswer" class="click"><div @click="saveToLocalStorage" class="test__answer-two">а</div></div>
+							<div @click="falseAnswer" class="test__answer-two">е</div>
+							<div @click="falseAnswer" class="test__answer-two">и</div>
+						</div>
+					</div>
+					<div class="test__footer">
+						<div class="test__footer-content">
+							<a @click="saveReset" href="../4_Тест На слух/index.html" class="test__footer-flex-left">
+								<div class="test__flex-back"> <- назад</div>
+								<div class="test__flex-text">На слух</div>
+							</a>
+							<div class="test__footer-flex-centr">Вчимо Маленькі</div>
+							<a @click="saveReset" href="../0_Menu/index.html" class="test__footer-flex-right">
+								<div class="test__flex-next">наступне -></div>
+								<div class="test__flex-text">Меню</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<transition name="modal">
+					<div v-if="trueShow" class="modal-mask">
+					  <div class="modal-container">
+						<div class="modal-header">
+						  <slot name="header">Розумничка!</slot>
+						</div>
+				
+						<div class="modal-body">
+						  <slot name="body"><img class="img__true img__truee" src="img/apple.png" alt=""></slot>
+						</div>
+				
+						<div class="modal-footer">
+						  <slot name="footer">
+							<a href="quest2.html"><button
+							  class="modal-default-button body__button"
+							  @click="$emit('close')"
+							>Продовжити</button></a>
+						  </slot>
+						</div>
+					  </div>
+					</div>
+				  </transition>
+				  <transition name="modal">
+					<div v-if="falseShow" class="modal-mask">
+					  <div class="modal-container">
+						<div class="modal-header false">
+						  <slot name="header">Спробуй ще!</slot>
+						</div>
+				
+						<div class="modal-body">
+						  <slot name="body"><img class="img__true" src="img/poop.png" alt=""></slot>
+						</div>
+				
+						<div class="modal-footer">
+						  <slot name="footer">
+							<a href="quest2.html"><button class="modal-default-button body__button">Продовжити</button></a>
+						  </slot>
+						</div>
+					  </div>
+					</div>
+				  </transition>
+			</div>
+			
+				<!-- <button><div class="body__button">Далі -></div></button> -->
+
+	</body>
+	<script type="module" src="js/main.js"></script>
+</html>
