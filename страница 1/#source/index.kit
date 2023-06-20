@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Абетка</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- @import "header.kit" -->
+			<div id="app" class="body">
+				<div class="body__text"></div>
+				<div class="body__img"><img src="img/block 1.png" alt=""></div>
+				<div class="body__block">
+					<div class="body__container">
+						<div @click="toggle" class="body__block-letter">А</div> 
+						<div @click="toggle_b" class="body__block-letter pl-12">Б</div>
+						<div @click="toggle_v" class="body__block-letter">В</div>
+						<div @click="toggle_g" class="body__block-letter pl-15">Г</div>
+						<div @click="toggle_gg" class="body__block-letter pl-15">Ґ</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_d" class="body__block-letter fz-48 pl-15 ">Д</div> 
+						<div @click="toggle_e" class="body__block-letter">Е</div>
+						<div @click="toggle_ue" class="body__block-letter">Є</div>
+						<div @click="toggle_gi" class="body__block-letter pl-7">Ж</div>
+						<div @click="toggle_z" class="body__block-letter">З</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_ui" class="body__block-letter">И</div> 
+						<div @click="toggle_i" class="body__block-letter pl-20">І</div>
+						<div @click="toggle_yi" class="body__block-letter fz-48 pl-20">Ї</div>
+						<div @click="toggle_u" class="body__block-letter pl-12 fz-48">Й</div>
+						<div @click="toggle_k" class="body__block-letter">К</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_l" class="body__block-letter">Л</div> 
+						<div @click="toggle_m" class="body__block-letter pl-7">М</div>
+						<div @click="toggle_n" class="body__block-letter">Н</div>
+						<div @click="toggle_o" class="body__block-letter">О</div>
+						<div @click="toggle_pi" class="body__block-letter">П</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_r" class="body__block-letter">Р</div> 
+						<div @click="toggle_s" class="body__block-letter">С</div>
+						<div @click="toggle_t" class="body__block-letter">Т</div>
+						<div @click="toggle_y" class="body__block-letter">У</div>
+						<div @click="toggle_f" class="body__block-letter">Ф</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_x" class="body__block-letter">Х</div> 
+						<div @click="toggle_c" class="body__block-letter fz-48 pl-9">Ц</div>
+						<div @click="toggle_ch" class="body__block-letter pl-12">Ч</div>
+						<div @click="toggle_sh" class="body__block-letter fz-48 pl-5">Ш</div>
+						<div @click="toggle_sch" class="body__block-letter fz-48 pl-5">Щ</div>
+					</div>
+					<div class="body__container">
+						<div @click="toggle_mzn" class="body__block-letter">Ь</div> 
+						<div @click="toggle_yu" class="body__block-letter pl-7 fz-48">Ю</div>
+						<div @click="toggle_ya" class="body__block-letter">Я</div>
+					</div>
+					<img src="img/карточка товара.png" alt="">
+				</div>
+				<button><div class="body__button">Далі -></div></button>
+				<div class="letters">
+					<transition name="fade"><img v-if="LetterA" class="img__latter-a" src="img/Letter/Aa.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterB" class="img__latter-a" src="img/Letter/Б.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterV" class="img__latter-a" src="img/Letter/Ve.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterG" class="img__latter-a" src="img/Letter/Ge.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterGG" class="img__latter-a" src="img/Letter/GU.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterD" class="img__latter-a" src="img/Letter/De.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterE" class="img__latter-a" src="img/Letter/E.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterUe" class="img__latter-a" src="img/Letter/UE.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterGi" class="img__latter-a" src="img/Letter/Gi.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterZ" class="img__latter-a" src="img/Letter/Z.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterUi" class="img__latter-a" src="img/Letter/IU.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterI" class="img__latter-a" src="img/Letter/i.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterYI" class="img__latter-a" src="img/Letter/YI.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterU" class="img__latter-a" src="img/Letter/u.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterK" class="img__latter-a" src="img/Letter/K.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterL" class="img__latter-a" src="img/Letter/L.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterM" class="img__latter-a" src="img/Letter/M.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterN" class="img__latter-a" src="img/Letter/H.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterO" class="img__latter-a" src="img/Letter/O.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterPi" class="img__latter-a" src="img/Letter/Pi.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterR" class="img__latter-a" src="img/Letter/R.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterS" class="img__latter-a" src="img/Letter/S.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterT" class="img__latter-a" src="img/Letter/T.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterY" class="img__latter-a" src="img/Letter/y.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterF" class="img__latter-a" src="img/Letter/F.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterX" class="img__latter-a" src="img/Letter/X.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterC" class="img__latter-a" src="img/Letter/C.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterCh" class="img__latter-a" src="img/Letter/CH.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterSh" class="img__latter-a" src="img/Letter/SH.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterSch" class="img__latter-a" src="img/Letter/SCH.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterMzn" class="img__latter-a" src="img/Letter/mzn.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterYu" class="img__latter-a" src="img/Letter/YU.png" alt=""></transition>
+					<transition name="fade"><img v-if="LetterYa" class="img__latter-a" src="img/Letter/Ya.png" alt=""></transition>
+				
+				</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="module" src="js/main.js"></script>
+</html>

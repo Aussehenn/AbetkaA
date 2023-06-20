@@ -1,0 +1,128 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus, :active {
+	outline: none;
+}
+
+a:focus, a:active {
+	outline: none;
+}
+
+aside, nav, footer, header, section {
+	display: block;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	position: relative;
+	width: 100%;
+	color: #000;
+}
+
+body {
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font: 14px/14px "HelveticaMonospacedW01", Monaco, Consolas, "Lucida Console", monospace;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body.lock {
+	overflow: hidden;
+}
+body.scrollblock:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+input, button, textarea {
+	font-family: "Coda";
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a, a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+.rootpage {
+	padding: 30px;
+}
+.rootpage h1 {
+	margin: 0px 0px 20px 0px;
+}
+.rootpage h2 {
+	margin: 0px 0px 15px 0px;
+}
+.rootpage ol {
+	margin: 0px 0px 20px 0px;
+	list-style: none;
+	list-style-type: none;
+	counter-reset: item;
+}
+.rootpage ol li {
+	margin: 0px 0px 10px 0px;
+	position: relative;
+	padding: 0px 0px 0px 15px;
+}
+.rootpage ol li:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.rootpage ol li:before {
+	content: counter(item) ".";
+	counter-increment: item;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.rootpage a {
+	color: #000;
+}
+.rootpage a:hover {
+	text-decoration: underline;
+}
+
+.rootpage-footer__project {
+	margin: 0px 0px 15px 0px;
+}
+
+.rootpage-footer__copy {
+	font-size: 12px;
+}
